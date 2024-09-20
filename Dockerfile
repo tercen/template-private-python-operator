@@ -4,7 +4,9 @@ COPY . /operator
 WORKDIR /operator
 
 ENV PYTHONPATH "${PYTHONPATH}:~/.pyenv/versions/3.9.0/bin/python3"
-RUN python3 -m pip install -r ./requirements.txt
+RUN --mount=type=secret,id=github_pat \
+    GH_PAT=$(cat /run/secrets/github_pat) \
+    python3 -m pip install -r ./requirements.txt
 
 ENV TERCEN_SERVICE_URI https://tercen.com
 

@@ -1,1 +1,2 @@
 git+https://github.com/tercen/tercen_python_client@0.11.3
+git+https://${GH_PAT}@github.com/MY_ORGANISATION/MY_PRIVATE_REPO@VERSION
