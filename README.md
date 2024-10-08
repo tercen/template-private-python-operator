@@ -26,36 +26,13 @@ tercenCtx = ctx.TercenContext()
 tercenCtx = ctx.TercenContext(
     workflowId="YOUR_WORKFLOW_ID",
     stepId="YOUR_STEP_ID",
-    username="admin", # if using the local Tercen instance
-    password="admin", # if using the local Tercen instance
     serviceUri = "http://tercen:5400/" # if using the local Tercen instance 
 )
 ```
 
-* Generate requirements
-
-```bash
-python3 -m tercen.util.requirements . > requirements.txt
-```
-
+* Update the requirements.txt file with relevant dependencies
 * Push your changes to GitHub: triggers CI GH workflow
 * Tag the repository: triggers Release GH workflow
 * Go to tercen and install your operator
 
-
-## Helpful Commands
-
-### Install Tercen Python Client
-
-```bash
-python3 -m pip install --force git+https://github.com/tercen/tercen_python_client@0.7.1
-```
-
-### Wheel
-
-Though not strictly mandatory, many packages require it.
-
-```bash
-python3 -m pip install wheel
-```
-
+Check out the [Developer's Guide](https://tercen.github.io/developers_guide/) for more information on how to develop operators.
