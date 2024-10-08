@@ -48,5 +48,5 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           # A PAT is needed for this action, GITHUB_TOKEN cannot get relevant permission 
-          # secrets: |
-            # github_pat=${{ secrets.GH_PAT }}
+          secrets: |
+            github_pat=${{ secrets.GH_PAT }}
